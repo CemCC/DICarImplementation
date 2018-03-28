@@ -8,12 +8,9 @@ namespace DiCarImplementation
 {
     class Production
     {
-        public InterfaceCar car;
+        public InterfaceCar car { get; set; }
         //Injection is happening here
-        public Production(InterfaceCar _car) {
-            car = _car;                 
-        }
-
+     
         public void ColourChange(string colour) => car.colour = colour;
         public void ModelChange(string model) => car.model = model;
         public void WheelChange(int tyrecount) => car.tyreCount = tyrecount;
