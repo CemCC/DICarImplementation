@@ -8,14 +8,12 @@ namespace DiCarImplementation
 {
     class Production
     {
-        public InterfaceCar car { get; set; }
-        //Injection is happening here
-     
-        public void ColourChange(string colour) => car.colour = colour;
-        public void ModelChange(string model) => car.model = model;
-        public void WheelChange(int tyrecount) => car.tyreCount = tyrecount;
+      
+        public void ColourChange(InterfaceCar car, string colour) => car.colour = colour;
+        public void ModelChange(InterfaceCar car, string model) => car.model = model;
+        public void WheelChange(InterfaceCar car, int tyrecount) => car.tyreCount = tyrecount;
 
-        public string CarFeatures() {
+        public string CarFeatures(InterfaceCar car) {
 
             var arry = new string[4];
 

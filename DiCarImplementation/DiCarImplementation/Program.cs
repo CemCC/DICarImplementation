@@ -10,20 +10,17 @@ namespace DiCarImplementation
     {
         static void Main(string[] args)
         {
-            var productionManagement = new Production
-            {
-               car = new Holden("Holden", "commodore", "Red", 4)
-            }; 
-
-            Console.WriteLine(productionManagement.CarFeatures());
+            var productionManagement = new Production();
+            var car = new Toyota("toyota", "Corolla", "White", 4);
+            Console.WriteLine(productionManagement.CarFeatures(car));
             Console.WriteLine();
             //Console.ReadLine();
 
-            productionManagement.ColourChange("Blue");
-            productionManagement.ModelChange("newHolden");
-            productionManagement.WheelChange(3);
+            productionManagement.ColourChange(car,"Blue");
+            productionManagement.ModelChange(car,"newToyota");
+            productionManagement.WheelChange(car, 3);
 
-            Console.WriteLine(productionManagement.CarFeatures() +" "+"Newly Produced");
+            Console.WriteLine(productionManagement.CarFeatures(car) +" "+"Newly Produced");
             Console.ReadLine();
             
 
